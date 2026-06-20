@@ -405,6 +405,33 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--white);
 }
 
+.section-services {
+  background: linear-gradient(
+    180deg,
+    var(--bg-light) 0%,
+    #d0e2ee 6%,
+    #5b8fad 16%,
+    var(--primary-dark) 28%,
+    var(--primary-dark) 100%
+  );
+  color: var(--white);
+  padding-bottom: 48px;
+}
+
+.section-services .section-header h2,
+.section-services .section-eyebrow {
+  color: var(--accent-yellow);
+}
+
+.section-services .section-header p {
+  color: var(--text-on-dark);
+}
+
+#services + .section-dark {
+  padding-top: 48px;
+  margin-top: 0;
+}
+
 .section-dark h2,
 .section-dark h3 { color: var(--accent-yellow); }
 
@@ -499,6 +526,47 @@ h1, h2, h3, h4, h5, h6 {
 .feature-card p {
   font-size: 14px;
   color: var(--text-light);
+}
+
+/* ── Accreditations ── */
+.accreditations-section {
+  padding: 64px 0;
+  background: linear-gradient(135deg, var(--cream) 0%, var(--white) 45%, var(--bg-light) 100%);
+  border-top: 1px solid rgba(11, 92, 143, 0.06);
+  border-bottom: 1px solid rgba(11, 92, 143, 0.06);
+}
+
+.accreditations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.accreditation-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+.accreditation-card img {
+  max-height: 150px;
+  max-width: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+.accreditation-card--nabh img {
+  max-height: 175px;
+}
+
+.accreditation-card--rghs img {
+  max-height: 160px;
 }
 
 /* ── Doctor Cards ── */
@@ -1134,6 +1202,8 @@ h1, h2, h3, h4, h5, h6 {
 
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .features-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .accreditations-grid { grid-template-columns: 1fr; max-width: 360px; }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
   .doctors-grid { grid-template-columns: 1fr; }
   .why-grid { grid-template-columns: repeat(2, 1fr); }
