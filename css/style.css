@@ -988,6 +988,102 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid rgba(11, 92, 143, 0.06);
 }
 
+.map-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(280px, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.map-wrapper {
+  position: relative;
+  min-height: 480px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(11, 92, 143, 0.08);
+  background: var(--bg-light);
+}
+
+.map-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.map-info-card {
+  background: var(--white);
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(11, 92, 143, 0.08);
+  border-top: 4px solid var(--accent-yellow);
+  display: flex;
+  flex-direction: column;
+}
+
+.map-info-badge {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  margin-bottom: 16px;
+  border-radius: 999px;
+  background: rgba(11, 92, 143, 0.08);
+  color: var(--primary-dark);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.map-info-card h3 {
+  font-size: 1.35rem;
+  line-height: 1.35;
+  margin-bottom: 12px;
+}
+
+.map-address {
+  color: var(--text);
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.map-meta {
+  list-style: none;
+  margin-bottom: 24px;
+}
+
+.map-meta li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(11, 92, 143, 0.08);
+  font-size: 14px;
+}
+
+.map-meta li:last-child { border-bottom: 0; }
+
+.map-meta span {
+  min-width: 22px;
+  font-size: 16px;
+}
+
+.map-actions {
+  display: grid;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.map-actions .btn-block {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
 .form-group { margin-bottom: 18px; }
 
 .form-group label {
@@ -1213,6 +1309,8 @@ h1, h2, h3, h4, h5, h6 {
   .surgery-grid.reverse { direction: ltr; }
 
   .mv-grid, .contact-grid { grid-template-columns: 1fr; }
+  .map-layout { grid-template-columns: 1fr; }
+  .map-wrapper { min-height: 360px; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 
